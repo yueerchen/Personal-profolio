@@ -146,7 +146,7 @@
   margin: 0;
   line-height: 1.5; }
   #home-bg#home-bg {
-    background: url("/images/bg.JPG");
+    background: url("/images/bg.jpg");
     background-attachment: fixed;
     background-size: cover; }
     #home-bg#home-bg .cover {
@@ -663,6 +663,21 @@ input[type="submit"] {
 #service .block-title {
   padding-bottom: 20px; }
 
+#service h4 {
+  font-size: 17px;
+  padding: 20px 0 0;
+  font-weight: 600;
+  line-height: 1.5em;
+  margin-bottom: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center; }
+
+#service p {
+  font-size: 15px;
+  margin: 0 0 10px;
+  font-weight: 400;
+  text-align: center; }
+
 .service-icon {
   width: 100px;
   height: 100px;
@@ -676,18 +691,3 @@ input[type="submit"] {
   .service-icon:hover {
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.1);
     transform: translateY(-2px); }
-
-h4 {
-  font-size: 17px;
-  padding: 20px 0 0;
-  font-weight: 600;
-  line-height: 1.5em;
-  margin-bottom: 10px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center; }
-
-p {
-  font-size: 15px;
-  margin: 0 0 10px;
-  font-weight: 400;
-  text-align: center; }
