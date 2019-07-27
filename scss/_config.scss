@@ -1,0 +1,56 @@
+@import './variables';
+@mixin easeinout {
+    transition: all .3s ease-in-out;
+}
+
+@mixin background {
+    @if $show-home-image {
+        &#home-bg {
+            background: $background-image;
+            background-attachment: fixed;
+            background-size: cover;
+            .cover {
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba($primary-color-dark, $background-opcity);
+                z-index: -1;
+            }
+        }
+    }
+}
+
+@mixin MQ($canvas) {
+    @if $canvas==XS {
+        @media only screen and (max-width: $XS) {
+            @content;
+        }
+    }
+    @else if $canvas==S {
+        @media only screen and (max-width: $S) {
+            @content;
+        }
+    }
+    @else if $canvas==M {
+        @media only screen and (max-width: $M) {
+            @content;
+        }
+    }
+    @else if $canvas==ML {
+        @media only screen and (max-width: $ML) {
+            @content;
+        }
+    }
+    @else if $canvas==L {
+        @media only screen and (max-width: $L) {
+            @content;
+        }
+    }
+    @else if $canvas==maxL {
+        @media only screen and (min-width: $maxL) {
+            @content;
+        }
+    }
+}

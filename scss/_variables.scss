@@ -1,0 +1,24 @@
+$primary-color: #4F5D75;
+$primary-color-dark:#2D3142;
+$primary-color-light:#BFC0C0;
+$primary-font-color: #ffffff;
+$font-highlight-color: #D95D39;
+$primary-font: 'Segoe UI',
+Tahoma,
+Geneva,
+Verdana,
+sans-serif;
+$show-home-image: true;
+$background-image: url('/images/bg.JPG');
+$background-opcity: 0.6;
+
+/***************
+*breakpoints
+****************/
+
+$XS: 420px;
+$S: 480px;
+$M: 767px;
+$ML: 940px;
+$L: 1200px;
+$maxL: $L+1px;
