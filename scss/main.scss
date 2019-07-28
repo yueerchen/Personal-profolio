@@ -1,5 +1,6 @@
 @import './scss/config';
 @import './scss/menu';
+@import './scss/contact';
 * {
     box-sizing: border-box;
 }
@@ -27,7 +28,6 @@
 }
 
 // Homepage
-// Headings
 h3,
 h4 {
     margin: 0;
@@ -160,18 +160,20 @@ footer {
                 font-size: 45px;
             }
             .row {
+                .col-sm-4 {
+                    @include MQ(S) {
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
                 .photo {
                     max-width: 280px;
                     border: 3px solid #fff;
                     margin-bottom: -80px;
                     box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.2);
                     @include MQ(S) {
-                        transform: translate(50%, 0);
                         max-width: 200px;
                         margin-bottom: 10px;
-                    }
-                    @include MQ(XS) {
-                        transform: translate(40%, 0);
                     }
                     @include easeinout;
                     &:hover {
@@ -313,137 +315,21 @@ footer {
     }
 }
 
-// Contact page
-#contact {
-    .pg-container {
-        margin-top: 25px;
-    }
-    .pg-inner__header {
-        text-align: center;
-    }
-    .pg-inner__body {
-        width: 1000px;
-        @include MQ(ML) {
-            transform: scale(0.80);
-            transform-origin: 0 0;
-        }
-    }
-}
-
-.contact-left {
-    .map {
-        width: 100%;
-        height: 180px;
-        margin: 15px 0 30px;
-    }
-    @include MQ(L) {
-        transform: scale(0.70);
-        transform-origin: 0 0;
-    }
-}
-
-.contact-info-block {
-    position: relative;
-    text-align: left;
-    width: 100%;
-    display: block;
-    margin: 0;
-    padding: 10px 10px 10px 0;
-    .ci-icon {
-        position: absolute;
-        top: 50%;
-        margin-top: -18px;
-        width: 36px;
-        height: 36px;
-        background: #fafafa;
-        border-radius: 20px;
-        text-align: center;
-        i {
-            position: relative;
-            font-size: 18px;
-            color: $font-highlight-color;
-            text-align: center;
-            line-height: 36px;
-        }
-    }
-    .ci-text {
-        padding-left: 50px;
-        h5 {
-            margin: 5px 0;
-            font-size: 0.83em;
-        }
-    }
-}
-
-.form-group-icon {
-    display: flex;
-    margin: 0 0 25px;
-    i {
-        font-size: 18px;
-        width: 40px;
-        text-align: center;
-        line-height: 41px;
-        height: 100%;
-        color: #bdbdbd;
-        background-color: #fafafa;
-        border-bottom: 1px solid #e0e0e0;
-    }
-    .form-control {
-        border: 0;
-        border-bottom: 1px solid #e0e0e0;
-        border-radius: 0;
-        display: block;
-        font-size: 0.9em;
-        margin: 0;
-        padding: 10px 0 10px 0;
-        height: 42px;
-        width: 70%;
-        background: transparent;
-        text-align: left;
-        color: inherit;
-        box-shadow: none;
-        outline: none;
-        font-family: $primary-font;
-        @include MQ(L) {
-            width: 40%;
-        }
-    }
-}
-
-.g-recaptcha {
-    transform: scale(1);
-    transform-origin: 0 0;
-    @include MQ(L) {
-        transform: scale(0.70);
-    }
-}
-
-input[type="submit"] {
-    background-color: $font-highlight-color;
-    color: #fff;
-    border: 0;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.3);
-    text-transform: uppercase;
-    font-family: inherit;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 2.8;
-    padding: 0 1.5em;
-    outline: none;
-    border-radius: 3px;
-    margin-top: 20px;
-}
-
 // Resume page
 #resume {
     .pg-inner {
-        margin-top: 30vh;
+        margin-top: 10vh;
+        margin-bottom: 5vh;
         @include MQ(ML) {
             margin-top: 60vh;
         }
     }
     .pg-inner__header {
         text-align: center;
+    }
+    @include MQ(S) {
+        padding: 0;
+        margin-top: 240px;
     }
 }
 
@@ -591,6 +477,9 @@ input[type="submit"] {
 
 //Service page
 #service {
+    @include MQ(S) {
+        padding: 64px 0 64px 0;
+    }
     .pg-container {
         margin-top: 0;
         @include MQ(M) {
